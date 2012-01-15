@@ -1,0 +1,6 @@
+---
+mechanism: oauth_2
+scope: https://www.googleapis.com/auth/calendar
+client_id: 680769755253-mp74r5efcvivtrmf8msrbgs8qbfd1krp.apps.googleusercontent.com
+client_secret: me8vTud5T941qfKyljuA4qLK
+redirect_uri: http://localhost:3000/polyhoraire/export

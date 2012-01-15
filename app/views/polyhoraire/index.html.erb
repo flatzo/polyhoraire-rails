@@ -1,0 +1,10 @@
+<%= form_tag("connect", :method => 'post') do%>
+	<%= label_tag(:user, "Nom d'utilisateur : ")%>
+	<%= text_field_tag(:user) %>
+	<%= label_tag(:password, "Mot de passe : ")%>
+	<%= password_field_tag(:password)%>
+	<%= label_tag(:bday,"Date de naissance : ")%>
+	<%= text_field_tag(:bday)%>
+	
+	<%= submit_tag("Se connecter")%>
+<% end %>
