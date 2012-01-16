@@ -126,6 +126,7 @@ GEM
     mime-types (1.17.2)
     multi_json (1.0.4)
     nokogiri (1.5.0)
+    pg (0.12.2)
     polyglot (0.3.3)
     polyhoraire (1.0.1)
       google-api-client
@@ -173,7 +174,6 @@ GEM
       hike (~> 1.2)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    sqlite3 (1.3.5)
     stringex (1.3.0)
     thor (0.14.6)
     tilt (1.3.3)
@@ -196,9 +196,9 @@ DEPENDENCIES
   data_mapper
   dm-sqlite-adapter
   jquery-rails
+  pg
   polyhoraire
   rails (= 3.1.3)
   sass-rails (~> 3.1.5)
-  sqlite3
   turn (~> 0.8.3)
   uglifier (>= 1.0.3)
