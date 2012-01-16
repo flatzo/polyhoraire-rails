@@ -1,6 +1,6 @@
 <% @calendarList.each do |id, name| %>
 	<li>
 		<span class="calendarColor" style="background-color: #"></span>
-		<a href="<%= id %>"><%= name %></a>
+		<a href="<%=  url_for :controller => 'polyhoraire/export/google',:action => 'pushto', :calendarID => id%>"><%= name %></a>
 	</li>
 <% end %>

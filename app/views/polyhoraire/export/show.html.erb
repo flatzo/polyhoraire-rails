@@ -1,0 +1,3 @@
+<% @exporters.each do |exporterID, name|%>
+	<li><a href="<%= polyhoraire_export_path + '/' + exporterID  + '/' + params[:trimester]%>"><%= name %></a></li>
+<% end %>

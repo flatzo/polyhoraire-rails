@@ -1,0 +1,6 @@
+<% @trimesters.each do |id, name|%>
+	<li>
+		<a href="<%= url_for(:controller => 'polyhoraire/export/google', :action => :export, :trimester => id) %>"><%= name %></a>
+	</li>
+	
+<% end%>
