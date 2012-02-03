@@ -1,3 +1,11 @@
+= Configuration
++Add google-api.yaml 
+ * mechanism: oauth_2
+ * scope: https://www.googleapis.com/auth/calendar
+ * client_id:
+ * client_secret:
+ * redirect_uri: 
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
