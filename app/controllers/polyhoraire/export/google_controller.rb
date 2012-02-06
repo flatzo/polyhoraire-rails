@@ -41,7 +41,7 @@ class Polyhoraire::Export::GoogleController < ApplicationController
   end
   
   def oauth2callback
-    session[:tokenID] = @exporter.authWebCallback(session[:tokenID])
+    session[:tokenPair] = @exporter.newTokenPair.to_hash
     redirect_to :action => :calendars
   end
   
@@ -52,8 +52,9 @@ class Polyhoraire::Export::GoogleController < ApplicationController
     @exporter = GoogleExporter.new
     callBackURI = url_for :action => :oauth2callback, :id => nil
     
+    tokenPair = TokenPair.new(session[:tokenPair])
     
-    accessToken = @exporter.authWeb(params[:code],session[:tokenID],callBackURI)
+    accessToken = @exporter.authWeb(params[:code],callBackURI,tokenPair)
     unless accessToken || params[:action] == 'oauth2callback'
       flash[:trimester] = params[:trimester]
       redirect_to @exporter.authURI
