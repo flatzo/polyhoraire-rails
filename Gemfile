@@ -32,11 +32,16 @@ gem 'jquery-rails'
 
 group :test do
   # Pretty printed test output
+  gem 'sqlite3'
   gem 'turn', '~> 0.8.3', :require => false
 end
 
+group :development do
+  gem 'sqlite3'
+end
+
+gem 'polyhoraire', '>= 1.2'
+
 group :production do
-  gem 'polyhoraire'
-  gem 'data_mapper'
-  gem 'dm-sqlite-adapter'
+  gem 'pg'
 end

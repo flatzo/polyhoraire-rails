@@ -1,5 +1,7 @@
 Web::Application.routes.draw do
 
+  root :action => :index, :controller => :polyhoraire
+
   namespace :polyhoraire do
     root :action => :index
     post 'connect'
@@ -14,28 +16,11 @@ Web::Application.routes.draw do
         match 'pushto/:calendarID' => '#pushto'
         get 'pushto'
         
-        
-        
         root :action => :index
       end
     end
   end
-=begin
-  match ':controller/:action/:id'
-  get 'polyhoraire/export/google/oauth2callback'
 
-  
-  get "polyhoraire/trimesters"
-  
-  match "polyhoraire/export/trimester/:id" => 'polyhoraire/export#trimester'
-  
-  get "polyhoraire/export/google/calendars"
-  get "polyhoraire/export/google/oauth2callback"
-  get 'polyhoraire/export/google'
-  match 'polyhoraire/export/google/export/:id' => 'polyhoraire/export/google#export'
-  match 'polyhoraire/export/google/send/:id' => 'polyhoraire/export/google#send'
-
-=end 
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
