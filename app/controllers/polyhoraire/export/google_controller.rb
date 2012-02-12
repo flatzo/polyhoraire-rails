@@ -1,6 +1,5 @@
 #encoding: UTF-8
 
-require 'data_mapper'
 require 'polyhoraire'
 require 'google_exporter'
 
