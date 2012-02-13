@@ -1,10 +1,16 @@
+= Demo
+http://polyhoraire.herokuapp.com
+
 = Configuration
-+Add google-api.yaml 
++Add config/google-api.yaml 
  * mechanism: oauth_2
  * scope: https://www.googleapis.com/auth/calendar
  * client_id:
  * client_secret:
  * redirect_uri: 
+
++Modify config/database.yml to match your database specifications
+
 
 == Welcome to Rails
 
